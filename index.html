@@ -171,6 +171,18 @@
       50% { transform: translateY(-10px); }
     }
 
+    /* Hero image - PERFORMANCE OPTIMIZED */
+    .hero-image {
+      width: 100%;
+      height: 240px; /* Fixed height to prevent layout shift */
+      border-radius: 20px 20px 0 0;
+      display: block;
+      margin-bottom: 0;
+      box-shadow: 0 4px 12px var(--shadow-color);
+      object-fit: cover; /* Prevent layout shift */
+      background-color: #f0f0f0; /* Placeholder color */
+    }
+
     /* Hero section with grocery icon */
     .hero-section {
       text-align: center;
@@ -694,21 +706,16 @@
   <canvas id="particles-js"></canvas>
 
   <div class="landing-container">
-    <!-- Hero section -->
-    <div class="hero-section">
-      <div class="grocery-icon">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M7 4V2C7 1.45 7.45 1 8 1H16C16.55 1 17 1.45 17 2V4H20C20.55 4 21 4.45 21 5S20.55 6 20 6H19V19C19 20.1 18.1 21 17 21H7C5.9 21 5 20.1 5 19V6H4C3.45 6 3 5.55 3 5S3.45 4 4 4H7ZM9 3V4H15V3H9ZM7 6V19H17V6H7Z" fill="white"/>
-          <path d="M9 8V17H11V8H9ZM13 8V17H15V8H13Z" fill="white"/>
-        </svg>
-      </div>
-      <div class="brand-name">GroceryAssist</div>
-      <div class="amount-display" id="amount-counter">$1,000</div>
-      <div class="amount-subtext">in Grocery Assistance Available</div>
-      <div class="secondary-copy" style="font-size: 14px; color: #666; margin-top: 8px; font-style: italic;">
-        Most people who got rejected from SNAP qualify for programs through this
-      </div>
-    </div>
+    <!-- Hero image - PERFORMANCE OPTIMIZED -->
+    <img
+      class="hero-image"
+      src="IMG_8120.PNG"
+      alt="Grocery Gift Card $1000"
+      width="480"
+      height="240"
+      fetchpriority="high"
+      loading="eager"
+    />
 
     <!-- Instructions -->
     <div class="instructions-container">
